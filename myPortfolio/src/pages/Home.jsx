@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber';
 import Loader from '../components/Loader';
-import Hill from '../models/hill';
+import Desk from '../models/Desk';
 {/* <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
   Popup
 </div> */}
@@ -9,18 +9,19 @@ import Hill from '../models/hill';
 const Home = () => {
   const adjustIslandForScreenSize = () => {
     let screenScale = null;
-    let hillRotation = [5, 0, 1.55];
+    let deskPosition = [0.1, -0.5, 0.1];
+    let deskRotation = [0.1, -1.5, -0.3];
 
     if (window.innerWidth < 768) {
-      screenScale = [.1,.1,.1];
+      screenScale = [1,1,1];
     } else {
       screenScale = [1,1,1];
     }
 
-    return [screenScale, hillRotation];
+    return [screenScale, deskPosition, deskRotation];
   }
 
-  const [hillScale, hillRotation] = adjustIslandForScreenSize();
+  const [screenScale, deskPosition, deskRotation] = adjustIslandForScreenSize();
 
   return (
     <section className='w-full h-screen relative'>
@@ -30,7 +31,7 @@ const Home = () => {
       >
         <Suspense fallback={<Loader />}>
         <directionalLight>
-          <Hill scale={hillScale} rotation={hillRotation} />
+          <Desk scale={screenScale} position={deskPosition} rotation={deskRotation} />
         </directionalLight>
         </Suspense>
       </Canvas>
