@@ -1,6 +1,8 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber';
+
 import Loader from '../components/Loader';
+
 import Desk from '../models/Desk';
 {/* <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
   Popup
@@ -15,7 +17,7 @@ const Home = () => {
     if (window.innerWidth < 768) {
       screenScale = [1,1,1];
     } else {
-      screenScale = [1,1,1];
+      screenScale = [1.25,1.25,1.25];
     }
 
     return [screenScale, deskPosition, deskRotation];
@@ -24,15 +26,16 @@ const Home = () => {
   const [screenScale, deskPosition, deskRotation] = adjustIslandForScreenSize();
 
   return (
-    <section className='w-full h-screen relative'>
+    <section className='w-full h-screen relative flex justify-center'>
+      <div className='absolute pt-20 z-10'>
+      <h1 className='font-bold font-mono text-2xl text-white text-center pl-5 pr-5'>Full-Stack Web Design: From Concept to Code</h1>
+      </div>
       <Canvas
         className='w-full h-screen bg-transparent'
         camera={{near: 0.1, far: 1000}}
       >
         <Suspense fallback={<Loader />}>
-        <directionalLight>
-          <Desk scale={screenScale} position={deskPosition} rotation={deskRotation} />
-        </directionalLight>
+            <Desk scale={screenScale} position={deskPosition} rotation={deskRotation} />
         </Suspense>
       </Canvas>
     </section>

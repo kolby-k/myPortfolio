@@ -25,27 +25,13 @@ export default function Desk(props) {
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.476}>
         <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
           <group rotation={[-Math.PI / 2, 0, 0]} scale={100}>
-            <mesh
+          <mesh
               geometry={nodes.Plane_Material005_0.geometry}
               material={materials["Material.005"]}
             />
             <mesh
               geometry={nodes.Plane_Line_art001_0.geometry}
               material={materials["Line_art.001"]}
-            />
-          </group>
-          <group
-            position={[12.593, 174.546, 157.279]}
-            rotation={[-Math.PI / 2, 0, 0]}
-            scale={100}
-          >
-            <mesh
-              geometry={nodes.Cube_Material010_0.geometry}
-              material={materials["Material.010"]}
-            />
-            <mesh
-              geometry={nodes.Cube_Line_art004_0.geometry}
-              material={materials["Line_art.004"]}
             />
           </group>
           <group
@@ -63,20 +49,6 @@ export default function Desk(props) {
             />
           </group>
           <group
-            position={[-58.106, 299.095, 163.622]}
-            rotation={[-Math.PI / 2, 0, -0.961]}
-            scale={100}
-          >
-            <mesh
-              geometry={nodes.Plane002_Material012_0.geometry}
-              material={materials["Material.012"]}
-            />
-            <mesh
-              geometry={nodes.Plane002_Line_art005_0.geometry}
-              material={materials["Line_art.005"]}
-            />
-          </group>
-          <group
             position={[-51.353, 156.109, -95.192]}
             rotation={[-Math.PI / 2, 0, 0]}
             scale={100}
@@ -88,20 +60,6 @@ export default function Desk(props) {
             <mesh
               geometry={nodes.Circle001_Line_art003_0.geometry}
               material={materials["Line_art.003"]}
-            />
-          </group>
-          <group
-            position={[-53.702, 157.444, 52.681]}
-            rotation={[-Math.PI / 2, 0, 0.06]}
-            scale={100}
-          >
-            <mesh
-              geometry={nodes.Plane003_Material008_0.geometry}
-              material={materials["Material.008"]}
-            />
-            <mesh
-              geometry={nodes.Plane003_Line_art006_0.geometry}
-              material={materials["Line_art.006"]}
             />
           </group>
           <group
@@ -118,62 +76,7 @@ export default function Desk(props) {
               material={materials["Line_art.001"]}
             />
           </group>
-          <group
-            position={[-51.177, 282.718, 153.83]}
-            rotation={[-Math.PI / 2, 0, 0.227]}
-            scale={100}
-          >
-            <mesh
-              geometry={nodes.Plane005_Material013_0.geometry}
-              material={materials["Material.013"]}
-            />
-            <mesh
-              geometry={nodes.Plane005_Line_art002_0.geometry}
-              material={materials["Line_art.002"]}
-            />
-          </group>
-          <group
-            position={[-23.406, 0.847, -30.198]}
-            rotation={[-Math.PI / 2, 0, -0.469]}
-            scale={100}
-          >
-            <mesh
-              geometry={nodes["Box_-2__Material007_0"].geometry}
-              material={materials["Material.007"]}
-            />
-            <mesh
-              geometry={nodes["Box_-2__Line_art005_0"].geometry}
-              material={materials["Line_art.005"]}
-            />
-          </group>
-          <group
-            position={[53.024, 160.045, 126.558]}
-            rotation={[-3.103, -0.393, 1.586]}
-            scale={94.625}
-          >
-            <mesh
-              geometry={nodes.Plane006_Material014_0.geometry}
-              material={materials["Material.014"]}
-            />
-            <mesh
-              geometry={nodes.Plane006_Line_art002_0.geometry}
-              material={materials["Line_art.002"]}
-            />
-          </group>
-          <group
-            position={[30.119, 169.397, -161.503]}
-            rotation={[-0.001, 0.906, 1.469]}
-            scale={36.672}
-          >
-            <mesh
-              geometry={nodes.Plane008_Material016_0.geometry}
-              material={materials["Material.016"]}
-            />
-            <mesh
-              geometry={nodes.Plane008_Line_art002_0.geometry}
-              material={materials["Line_art.002"]}
-            />
-          </group>
+        
           <group
             position={[-31.81, 155.877, -26.636]}
             rotation={[-Math.PI / 2, 0, -0.171]}
@@ -272,34 +175,7 @@ export default function Desk(props) {
               material={materials["Line_art.002"]}
             />
           </group>
-          <group
-            position={[-35.634, 154.6, -135.257]}
-            rotation={[-Math.PI / 2, 0, Math.PI]}
-            scale={75.114}
-          >
-            <mesh
-              geometry={nodes.Plane016_Material023_0.geometry}
-              material={materials["Material.023"]}
-            />
-            <mesh
-              geometry={nodes.Plane016_Line_art002_0.geometry}
-              material={materials["Line_art.002"]}
-            />
-          </group>
-          <group
-            position={[-71.816, 251.057, -174.897]}
-            rotation={[-Math.PI / 2, Math.PI / 2, 0]}
-            scale={100}
-          >
-            <mesh
-              geometry={nodes.BezierCurve_Material025_0.geometry}
-              material={materials["Material.025"]}
-            />
-            <mesh
-              geometry={nodes.BezierCurve_Line_art002_0.geometry}
-              material={materials["Line_art.002"]}
-            />
-          </group>
+          
           <group
             position={[-52.381, 223.403, -42.107]}
             rotation={[-Math.PI / 2, 0, -0.323]}
@@ -329,9 +205,9 @@ export default function Desk(props) {
             />
           </group>
           <group
-            position={[-44.725, 412.955, -0.075]}
+            position={[-44.725, 405.955, -0.075]}
             rotation={[-Math.PI / 2, Math.PI / 2, 0]}
-            scale={100}
+            scale={110}
           >
             <mesh
               geometry={nodes.BezierCurve001_Material027_0.geometry}
@@ -356,48 +232,7 @@ export default function Desk(props) {
               material={materials.Line_art}
             />
           </group>
-          <group
-            position={[-52.309, 244.771, 136.042]}
-            rotation={[-0.037, -0.19, -1.578]}
-            scale={87.697}
-          >
-            <mesh
-              geometry={nodes.Plane019_Material014_0.geometry}
-              material={materials["Material.014"]}
-            />
-            <mesh
-              geometry={nodes.Plane019_Line_art002_0.geometry}
-              material={materials["Line_art.002"]}
-            />
-          </group>
-          <group
-            position={[139.508, 0.847, 137.851]}
-            rotation={[-Math.PI / 2, 0, -2.461]}
-            scale={105.874}
-          >
-            <mesh
-              geometry={nodes["Box_-2_001_Material007_0"].geometry}
-              material={materials["Material.007"]}
-            />
-            <mesh
-              geometry={nodes["Box_-2_001_Line_art005_0"].geometry}
-              material={materials["Line_art.005"]}
-            />
-          </group>
-          <group
-            position={[-34.415, 158.042, 97.55]}
-            rotation={[-2.818, 0.713, 1.917]}
-            scale={41.395}
-          >
-            <mesh
-              geometry={nodes.Plane020_Material015_0.geometry}
-              material={materials["Material.015"]}
-            />
-            <mesh
-              geometry={nodes.Plane020_Line_art001_0.geometry}
-              material={materials["Line_art.001"]}
-            />
-          </group>
+          
           <group
             position={[-46.997, 200.172, 162.926]}
             rotation={[-Math.PI / 2, 0, 0.567]}
@@ -426,41 +261,7 @@ export default function Desk(props) {
               material={materials["Line_art.003"]}
             />
           </group>
-          <group
-            position={[-29.689, 158.042, 104.633]}
-            rotation={[-2.899, -0.027, 2.139]}
-            scale={41.395}
-          >
-            <mesh
-              geometry={nodes.Plane007_Material015_0.geometry}
-              material={materials["Material.015"]}
-            />
-            <mesh
-              geometry={nodes.Plane007_Line_art001_0.geometry}
-              material={materials["Line_art.001"]}
-            />
-          </group>
-          <group
-            position={[-38.694, 158.042, 73.622]}
-            rotation={[-0.394, 0.894, -0.696]}
-            scale={41.395}
-          >
-            <mesh
-              geometry={nodes.Plane021_Material015_0.geometry}
-              material={materials["Material.015"]}
-            />
-            <mesh
-              geometry={nodes.Plane021_Line_art001_0.geometry}
-              material={materials["Line_art.001"]}
-            />
-          </group>
-          <mesh
-            geometry={nodes.Plane022_Material032_0.geometry}
-            material={materials["Material.032"]}
-            position={[-31.455, 325.765, 5.717]}
-            rotation={[-0.179, 0.965, -1.507]}
-            scale={17.042}
-          />
+
           <mesh
             geometry={nodes.Plane023_Material032_0.geometry}
             material={materials["Material.032"]}
