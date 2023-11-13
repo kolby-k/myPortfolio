@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useState } from 'react'
 import { Canvas } from '@react-three/fiber';
 
 import Loader from '../components/Loader';
@@ -9,6 +9,8 @@ import Desk from '../models/Desk';
 </div> */}
 
 const Home = () => {
+  const [isRotating, setIsRotating] = useState();
+
   const adjustIslandForScreenSize = () => {
     let screenScale = null;
     let deskPosition = [0.1, -0.5, 0.1];
@@ -26,7 +28,7 @@ const Home = () => {
   const [screenScale, deskPosition, deskRotation] = adjustIslandForScreenSize();
 
   return (
-    <section className='w-full h-screen relative flex justify-center'>
+    <section className={`w-full h-screen relative flex justify-center ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}>
       <div className='absolute pt-20 z-10'>
       <h1 className='font-bold font-mono text-2xl text-white text-center pl-5 pr-5'>Full-Stack Web Design: From Concept to Code</h1>
       </div>
@@ -35,7 +37,13 @@ const Home = () => {
         camera={{near: 0.1, far: 1000}}
       >
         <Suspense fallback={<Loader />}>
-            <Desk scale={screenScale} position={deskPosition} rotation={deskRotation} />
+          <Desk 
+            scale={screenScale} 
+            position={deskPosition} 
+            rotation={deskRotation} 
+            isRotating={isRotating}
+            setIsRotating={setIsRotating}
+          />
         </Suspense>
       </Canvas>
     </section>
