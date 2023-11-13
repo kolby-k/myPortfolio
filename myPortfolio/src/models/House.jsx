@@ -76,10 +76,16 @@ export default function House({isRotating, setIsRotating, setCurrentStage, ...pr
         const normalizedRotation = ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
   
         switch (true) {
-          case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
+        case normalizedRotation >= 1.4 && normalizedRotation <= 1.9:
+            setCurrentStage(3);
+            break;
+            case normalizedRotation >= 0.5 && normalizedRotation <= 1.1:
+            setCurrentStage(2);
+            break;
+            case normalizedRotation >= 5.9 && normalizedRotation <= 6.5:
             setCurrentStage(1);
             break;
-          default:
+            default:
             setCurrentStage(null);
         }
       }
