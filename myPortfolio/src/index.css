@@ -185,3 +185,48 @@ body:has(.card[data-color="green"]:hover) {
   box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
     0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
 }
+
+
+/* MY RULES */
+
+ul.skills-list li {
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  padding: 1rem;
+}
+
+.skills-list.backend li {
+  padding-bottom: 1.4rem;
+}
+
+
+/* Hide the tooltip by default */
+.tooltip {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+/* Show the tooltip on hover */
+.skill-card {
+  position: relative; /* Ensure relative positioning */
+  cursor: help;
+  justify-content: center;
+}
+
+.skill-card:hover .tooltip {
+  display: block;
+  /* Position the tooltip above the image */
+  bottom: 100%; /* Adjust this value as needed */
+  left: 50%; /* Center it horizontally */
+  transform: translateX(-50%);
+  z-index: 12;
+}
+
