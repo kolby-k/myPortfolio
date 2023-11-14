@@ -105,6 +105,7 @@ export default function House({isRotating, setIsRotating, setCurrentStage, ...pr
         canvas.removeEventListener("pointermove", handlePointerMove);
         document.removeEventListener("keydown", handleKeyDown);
         document.removeEventListener("keyup", handleKeyUp);
+        
       };
     }, [gl, handlePointerDown, handlePointerUp, handlePointerMove]);
   

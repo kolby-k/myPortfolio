@@ -10,7 +10,8 @@ import HomeInfo from '../components/HomeInfo';
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState();
-  const [currentStage, setCurrentStage] = useState(null);
+  const [currentStage, setCurrentStage] = useState(2);
+
 
   const adjustIslandForScreenSize = () => {
     let screenScale = null;
@@ -28,12 +29,11 @@ const Home = () => {
 
   const [screenScale, housePosition, houseRotation] = adjustIslandForScreenSize();
 
+  
   return (
+    <>
     <section className={`w-full h-screen relative flex justify-center ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}>
       
-<div className='absolute bottom-20 pb-20 z-10'>
-      <h1 className='font-bold font-mono text-2xl text-white text-center pl-5 pr-5'> ←  Click and Drag  →</h1>
-      </div>
       <Canvas
         className='w-full h-screen bg-transparent'
         camera={{ near: 0.1, far: 1000 }}
@@ -58,10 +58,11 @@ const Home = () => {
           />
         </Suspense>
       </Canvas>
-      <div className='absolute top-60 left-0 right-0 z-10 flex items-center justify-center bg-slate-500/25'>
+      <div className='content-div absolute top-32 left-50 z-10 flex items-center justify-center'>
       {currentStage && <HomeInfo currentStage={currentStage}/>}
       </div>
     </section>
+    </>
   )
 }
 

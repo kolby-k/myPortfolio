@@ -189,6 +189,10 @@ body:has(.card[data-color="green"]:hover) {
 
 /* MY RULES */
 
+.content-div {
+  cursor: initial;
+}
+
 ul.skills-list li {
   display: flex;
   justify-content: center;
