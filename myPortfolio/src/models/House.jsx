@@ -66,23 +66,23 @@ export default function House({isRotating, setIsRotating, setCurrentStage, ...pr
       if (!isRotating) {
         setRotationSpeed(rotationSpeed * dampingFactor);
   
-        if (Math.abs(rotationSpeed) < 0.001) {
+        if (Math.abs(rotationSpeed) < 0.1) {
           setRotationSpeed(0);
         }
         houseRef.current.rotation.y += rotationSpeed;
       } else {
         const rotation = houseRef.current.rotation.y;
   
-        const normalizedRotation = ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+        const normalizedRotation = rotation % (2 * Math.PI);
   
         switch (true) {
-        case normalizedRotation >= 1.4 && normalizedRotation <= 1.8:
+        case normalizedRotation >= 1.3 && normalizedRotation <= 1.9:
             setCurrentStage(3);
             break;
-            case normalizedRotation >= 0.7 && normalizedRotation <= 1.1:
+            case normalizedRotation >= 0.6 && normalizedRotation <= 1.1:
             setCurrentStage(2);
             break;
-            case normalizedRotation >= 0 && normalizedRotation <= 0.4:
+            case normalizedRotation >= -0.5 && normalizedRotation < 0.4:
             setCurrentStage(1);
             break;
             default:
