@@ -10,7 +10,7 @@ import HomeInfo from '../components/HomeInfo';
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState();
-  const [currentStage, setCurrentStage] = useState(2);
+  const [currentStage, setCurrentStage] = useState(3);
 
 
   const adjustIslandForScreenSize = () => {
@@ -21,7 +21,7 @@ const Home = () => {
     if (window.innerWidth < 768) {
       screenScale = [0.8,0.8,0.8];
     } else {
-      screenScale = [1,1,1];
+      screenScale = [0.75,0.75,0.75];
     }
 
     return [screenScale, housePosition, houseRotation];
@@ -42,7 +42,7 @@ const Home = () => {
         onPointerMove={(e) => {
           if (isRotating) {
             const delta = e.movementX / window.innerWidth;
-            const rotationSpeed = delta * 0.01 * Math.PI;
+            const rotationSpeed = delta * .001 * Math.PI;
           }
         }}
       >
@@ -57,7 +57,9 @@ const Home = () => {
             setCurrentStage={setCurrentStage}
           />
         </Suspense>
+
       </Canvas>
+      <div className='text-l flex absolute bottom-8 flex-col justify-center center-align border-red-900'>Interactive<br/><span className='arrow-center'>⟺</span></div>
       <div className='content-div absolute top-32 left-50 z-10 flex items-center justify-center'>
       {currentStage && <HomeInfo currentStage={currentStage}/>}
       </div>

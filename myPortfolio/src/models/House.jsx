@@ -40,19 +40,19 @@ export default function House({isRotating, setIsRotating, setCurrentStage, ...pr
   
         const delta = (clientX - lastX) / viewport.width;
   
-        houseRef.current.rotation.y += delta * 0.01 * Math.PI;
+        houseRef.current.rotation.y += delta * 0.01 * Math.PI/2;
         setLastX(clientX);
-        setRotationSpeed(delta * 0.01 * Math.PI);
+        setRotationSpeed(delta * 0.01 * Math.PI/2);
       }
     };
   
     const handleKeyDown = (e) => {
       if (e.key === "ArrowLeft") {
         if (!isRotating) setIsRotating(true);
-        houseRef.current.rotation.y += 0.01 * Math.PI;
+        houseRef.current.rotation.y += 0.01 * Math.PI/2;
       } else if (e.key === "ArrowRight") {
         if (!isRotating) setIsRotating(true);
-        houseRef.current.rotation.y -= 0.01 * Math.PI;
+        houseRef.current.rotation.y -= 0.01 * Math.PI/2;
       }
     };
   
