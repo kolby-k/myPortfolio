@@ -13,23 +13,24 @@ const InfoBox = ({ text, link, btnText }) => (
 const renderContent = {
     1: (
         <InfoBox
-            text="I'm motivated to learn new skills and apply them in creative ways."
-            link="/about"
-            btnText="My Experience  →"
+            text="I enjoy applying my skills in creative and innovative ways."
+            link="/projects"
+            btnText="My Projects  →"
         />
     ),
     2: (
         <InfoBox
-        text="I enjoy frontend, backend, and fullstack web development."
-        link="/projects"
-        btnText="See Projects  →"
+        text="I'm interested in frontend and backend web development."
+        link="/about"
+        btnText="Learn More  →"
     />
     ),
     3: (
-        <h1 className='sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5'>
-            Hey, I'm <span className='font-semibold'>Kolby</span> 👋 <br />
-            A website developer from Canada
-        </h1>
+        <InfoBox
+        text="Hey, I'm Kolby 👋 A website developer from Canada."
+        link="/Contact"
+        btnText="Contact Me  →"
+    />
     )
 }
 

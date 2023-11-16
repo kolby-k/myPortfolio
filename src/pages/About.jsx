@@ -2,6 +2,8 @@ import React from 'react'
 
 const About = () => {
   return (
+    <>
+    <p className='subhead-text'>Aside from being outdoors, I am extermeley interested in web development.</p>
     <div className='bg-zinc-900 w-full h-screen relative'>
        <div className="flex justify-center content-center flex-col">
             <h1 className="font-semibold">Frontend Skills:</h1>
@@ -95,6 +97,7 @@ const About = () => {
         </ul>
         </div>
       </div>
+      </>
   )
 }
 
