@@ -79,8 +79,17 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .cta-text {
-    @apply text-black-500 font-extrabold flex-1 text-3xl max-md:text-center;
+    @apply text-slate-200 font-extrabold flex-1 text-3xl max-md:text-center;
   }
+
+  .date-text {
+    @apply text-slate-800
+  }
+
+  .dog-style {
+    @apply w-[350px] h-[550px] relative left-[25%] 
+  }
+  
 }
 
 .glassmorphism {
@@ -112,10 +121,12 @@ body:has(.card[data-color="green"]:hover) {
   height: inherit;
   transition: 250ms;
   transform-style: preserve-3d;
-  transform-origin: bottom right;
-  transform: rotateZ(15deg);
+  transform-origin:  bottom;
   will-change: transform;
   box-shadow: 16px 0 40px #e4e4e4;
+  background: rgba(99, 95, 95, 0.2);
+  border-radius: 10px;
+  
 }
 
 .block-container .btn-back-red {
@@ -152,12 +163,12 @@ body:has(.card[data-color="green"]:hover) {
   z-index: 1;
   width: inherit;
   height: inherit;
-  background-color: #ffffff33;
+  background-color: #ffffff;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   transition: 250ms;
   transform-style: preserve-3d;
-  transform-origin: top left;
+  transform-origin:  bottom;
   overflow: hidden;
 }
 
@@ -238,3 +249,10 @@ li {
 .arrow-center {
   align-self: center;
 }
+
+@media screen and (min-width: 1170px) {
+  .date-text {color: white;}
+  .dog-style {}
+};
+
+

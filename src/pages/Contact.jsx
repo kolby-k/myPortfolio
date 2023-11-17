@@ -124,7 +124,7 @@ const handleBlur = () => {
           </button>
         </form>
       </div>
-      <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px] mt-7'>
+      <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px] dog-style'>
         <Canvas
           camera={{
             position: [0,0,5],
@@ -138,10 +138,11 @@ const handleBlur = () => {
             <ambientLight color="white" intensity="2" />
 
             <Dog 
-              position={[1,0,0]}
+              position={[0,.5,0]}
               rotation={[0.6,0,0]}
-              scale={[1.5,1.5,1.5]}
+              scale={[1,1,1]}
               currentAnimation={currentAnimation}
+              
             />
           </Suspense>
         </Canvas>

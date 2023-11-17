@@ -1,103 +1,100 @@
-import React from 'react'
+import React from 'react';
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+
+import CTA from '../components/CTA';
+import { skills, experiences } from '../constants/index';
 
 const About = () => {
   return (
-    <>
-    <p className='subhead-text'>Aside from being outdoors, I am extermeley interested in web development.</p>
-    <div className='bg-zinc-900 w-full h-screen relative'>
-       <div className="flex justify-center content-center flex-col">
-            <h1 className="font-semibold">Frontend Skills:</h1>
-        <ul className="skills-list">
-            <li>
-                <div className="skill-card">
-                    <div className="tooltip">HTML5</div>
-                    <div className="card-icon">
-                        <img src="../src/assets/icons/frontend/html5.png" alt="HTML5 logo" />
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div className="skill-card">
-                    <div className="tooltip">CSS3</div>
-                    <div className="card-icon">
-                        <img src="../src/assets/icons/frontend/css3.png" alt="CSS3 logo" />
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div className="skill-card">
-                    <div className="tooltip">JavaScript</div>
-                    <div className="card-icon">
-                        <img src="../src/assets/icons/frontend/javascript.png" alt="javascript logo" />
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div className="skill-card">
-                    <div className="tooltip">React</div>
-                    <div className="card-icon">
-                        <img src="../src/assets/icons/frontend/react.png" alt="React logo" />
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div className="skill-card">
-                    <div className="tooltip">Redux</div>
-                    <div className="card-icon">
-                        <img className="w-10 h-10" src="../src/assets/icons/frontend/redux-logo.png" alt="Redux logo" />
-                    </div>
-                </div>
-            </li>
-        </ul>
-        </div>
-        <br />
+    <section className='max-container'>
+        <h1 className='head-text'>
+            Hello, I'm <span className='green-gradient_text'>Kolby</span>
+        </h1>
+
         <div>
-        <h1 className="font-semibold" >Backend Skills:</h1>
-        <ul className="skills-list backend">
-            <li>
-                <div className="skill-card">
-                    <div className="tooltip">Node.js</div>
-                    <div className="card-icon">
-                        <img className="w-10 h-10" src="../src/assets/icons/backend/node-js.png" alt="Node.js logo" />
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div className="skill-card">
-                    <div className="tooltip">Express.js</div>
-                    <div className="card-icon">
-                        <img className="w-10 h-10" src="../src/assets/icons/backend/expressjs.png" alt="Express.js logo" />
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div className="skill-card">
-                    <div className="tooltip">Python</div>
-                    <div className="card-icon">
-                        <img className="w-10 h-10" src="../src/assets/icons/backend/python.png" alt="Python logo" />
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div className="skill-card">
-                    <div className="tooltip">Git</div>
-                    <div className="card-icon">
-                        <img className="w-10 h-10" src="../src/assets/icons/backend/git.png" alt="Git logo" />
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div className="skill-card">
-                    <div className="tooltip">SQL</div>
-                    <div className="card-icon">
-                        <img className="w-10 h-10" src="../src/assets/icons/backend/sql.png" alt="SQL logo" />
-                    </div>
-                </div>
-            </li>
-        </ul>
+            <p className='mt-5 flex flex-col gap-3 text-slate-300'>
+            As a Full Stack Developer from Canada, my journey in tech is driven by a deep curiosity for innovation and a passion for problem-solving. Specializing in both front-end and back-end development, I am excited to turn original ideas and complex challenges into user-friendly, seamless digital solutions.
+            <br className='mt-4'/>
+            My goal is to build websites and applications that not only function flawlessly but also push the boundaries of what's possible in the digital world.
+            </p>
         </div>
-      </div>
-      </>
+
+        <div className='py-10 flex flex-col'>
+            <h3 className='subhead-text'>
+                My Skills:
+            </h3>
+            <div className='mt-16 flex flex-wrap gap-12 light-background'>
+            {skills.map((skill) => (
+                <div className='block-container w-20 h-20'>
+                    <div className='btn-back'/>
+                    <div className='btn-front rounded-xl flex justify-center items-center'>
+                    <img 
+                        src={skill.imageUrl}
+                        alt={skill.name}
+                        className="w-1/2 h-1/2 object-container"
+                    />
+                    </div>
+                </div>
+            ))}
+            </div>
+        </div>
+
+        <div className='py-16'>
+            <h3 className='subhead-text'>Work Experience</h3>
+            <div className='mt-5 flex flex-col gap-3 text-slate-300'>
+            <p>
+            I have been fortunate to gain valuable experience in web development through my current role at Business Link. Additionally, a significant part of my expertise comes from my interest in technology and self-learning. This includes building my own websites for fun, ranging from simple blogs to more complex e-commerce shops, and seeking educational opportunities like the Full Stack Developer career path on Codecademy, which I recently completed.
+            <br className='mt-4'/> 
+            The combination of professional exposure and self-driven learning is an asset in my eyes. It not only demonstrates my commitment to learning and adapting within the dynamic field of web development but also equips me with the diverse experience necessary to be truly innovative.
+            </p>
+        </div>
+
+        <div className='mt-12 flex'>
+            <VerticalTimeline>
+                {experiences.map((experience) => (
+                    <VerticalTimelineElement
+                        key={experience.company_name}
+                        date={<span className='date-text'>{experience.date}</span>}
+                        icon={<div className='flex justify-center items-center w-full h-full'>
+                            <img 
+                            src={experience.icon}
+                            alt={`${experience.company_name} Logo`}
+                            className='w-[60%] h-[60%] object-contain'
+                        />
+                        </div>}
+                        contentStyle={{
+                            borderBottom: '8px',
+                            borderStyle: 'solid',
+                            borderBottomColor: experience.iconBg,
+                            boxShadow: 'none'
+                        }}
+                        iconStyle={{ background: experience.iconBg }}
+                        >
+                        <div>
+                            <h3 className='text-black text-xl font-poppins font-semibold'>
+                                {experience.title}
+                            </h3>
+                            <p className='text-black-500 font-medium font-base' style={{margin:0}}>
+                                {experience.company_name}
+                            </p>
+                        </div>
+                        <ul className='my-5 list-disc ml-5 space-y-2'>
+                            {experience.points.map((point, index) => (
+                                <li key={`experience-point-${index}`} className='text-slate-600 text-sm font-normal pl-1 '>
+                                    {point}
+                                </li>
+                            ))}
+                        </ul>
+                    </VerticalTimelineElement>
+                ))}
+            </VerticalTimeline>
+        </div>
+        </div>
+
+        <hr className='border-slate-200' />
+        <CTA />
+    </section>
   )
 }
 
