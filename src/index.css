@@ -87,7 +87,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .dog-style {
-    @apply w-[350px] h-[550px] relative left-[25%] 
+    @apply w-[500px] h-[500px] absolute top-0 right-0 -translate-y-10
   }
   
 }
@@ -250,9 +250,14 @@ li {
   align-self: center;
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (max-width: 1169px) {
   .date-text {color: white;}
-  .dog-style {}
 };
 
+@media screen and (max-width: 759px) {
+  .dog-style{transform: scale(0.95) translate(7rem, -4rem)}
+}
 
+@media screen and (max-width: 479px) {
+  .dog-style{display: none;}
+}
