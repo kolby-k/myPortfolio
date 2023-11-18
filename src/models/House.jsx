@@ -50,9 +50,11 @@ export default function House({isRotating, setIsRotating, setCurrentStage, ...pr
       if (e.key === "ArrowLeft") {
         if (!isRotating) setIsRotating(true);
         houseRef.current.rotation.y += 0.01 * Math.PI/2;
+        rotationSpeed.current = 0.00125;
       } else if (e.key === "ArrowRight") {
         if (!isRotating) setIsRotating(true);
         houseRef.current.rotation.y -= 0.01 * Math.PI/2;
+        rotationSpeed.current = -0.00125;
       }
     };
   
