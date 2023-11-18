@@ -14,9 +14,9 @@ const About = () => {
 
         <div>
             <p className='mt-5 flex flex-col gap-3 text-slate-300'>
-            As a Full Stack Developer from Canada, my journey in tech is driven by a deep curiosity for innovation and a passion for problem-solving. Specializing in both front-end and back-end development, I am excited to turn original ideas and complex challenges into user-friendly, seamless digital solutions.
-            <br className='mt-4'/>
-            My goal is to build websites and applications that not only function flawlessly but also push the boundaries of what's possible in the digital world.
+            Driven by a deep curiosity for innovation and a passion for problem-solving, my journey as a Full Stack Developer encompasses both front-end and back-end development. While specializing in both of these areas presents some unique challenges, the process is undoubtedly rewarding. 
+             <br className='mt-4'/>
+            My goal is to build websites and applications that not only function flawlessly but also push the boundaries of what's possible in our modern, digital world.
             </p>
         </div>
 
@@ -28,12 +28,13 @@ const About = () => {
             {skills.map((skill) => (
                 <div className='block-container w-20 h-20'>
                     <div className={`btn-back rounded-xl`}/>
-                    <div className='btn-front rounded-xl flex justify-center items-center'>
+                    <div className='btn-front-tooltip rounded-xl flex justify-center items-center'>
                     <img 
                         src={skill.imageUrl}
                         alt={skill.name}
                         className="w-1/2 h-1/2 object-container"
                     />
+                    <div className='tooltip'>{skill.name}</div>
                     </div>
                 </div>
             ))}
