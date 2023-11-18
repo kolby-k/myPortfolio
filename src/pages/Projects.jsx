@@ -1,6 +1,8 @@
 import React from 'react'
 
 import { projects } from '../constants'
+import { Link } from 'react-router-dom'
+import CTA from '../components/CTA'
 
 const Projects = () => {
   return (
@@ -29,9 +31,34 @@ const Projects = () => {
               />
               </div>
             </div>
+
+            <div className='mt-5 flex flex-col'>
+              <h4 className='text-2xl font-poppins font-semibold text-slate-300'>
+                {project.name}
+              </h4>
+              <p className='mt-5 flex flex-col gap-3 text-slate-300'>
+                {project.description}
+              </p>
+              <div className='mt-5 flex items-center gap-2 font-poppins'>
+                <Link
+                  to={project.link}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='font-semibold green-gradient_text'
+                  >
+                    Live Link
+                  </Link>
+                  <p className='arrow object-contain'>
+                    ➡︎
+                  </p>
+                </div>
+              </div>
           </div>
       ))}
     </div>
+
+    <hr className='border-slate-200' />
+        <CTA />
     </section>
   )
 }

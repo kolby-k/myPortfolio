@@ -242,6 +242,10 @@ li {
   z-index: 12;
 }
 
+.arrow {
+  color: #01de14;
+  font-size: 1.5rem;
+}
 
 .arrow-center {
   align-self: center;
