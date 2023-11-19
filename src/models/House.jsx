@@ -11,15 +11,17 @@ export default function House({isRotating, setIsRotating, setCurrentStage, ...pr
   
     const [lastX, setLastX] = useState(0);
     const [rotationSpeed, setRotationSpeed] = useState(0);
+    const [isHolding, setIsHolding] = useState(false);
     const houseRef = useRef();
   
     const dampingFactor = 0.95;
-  
+    const dampingFactorSlow = 0.8; // Adjust this value as needed
+      
     const handlePointerDown = (e) => {
       e.stopPropagation();
       e.preventDefault();
       setIsRotating(true);
-  
+      setIsHolding(true); 
       const clientX = e.touches ? e.touches[0].clientX : e.clientX;
   
       setLastX(clientX);
@@ -29,6 +31,7 @@ export default function House({isRotating, setIsRotating, setCurrentStage, ...pr
       e.stopPropagation();
       e.preventDefault();
       setIsRotating(false);
+      setIsHolding(false); // User released the pointer
     };
   
     const handlePointerMove = (e) => {
@@ -66,10 +69,16 @@ export default function House({isRotating, setIsRotating, setCurrentStage, ...pr
   
     useFrame(() => {
       if (!isRotating) {
-        setRotationSpeed(rotationSpeed * dampingFactor);
-  
-        if (Math.abs(rotationSpeed) < 0.1) {
-          setRotationSpeed(0);
+        if (isHolding) {
+          // User is holding, apply slower counter-rotation
+          setRotationSpeed(rotationSpeed * dampingFactorSlow);
+        } else {
+          // User released, apply regular damping
+          setRotationSpeed(rotationSpeed * dampingFactor);
+    
+          if (Math.abs(rotationSpeed) < 0.1) {
+            setRotationSpeed(0);
+          }
         }
         houseRef.current.rotation.y += rotationSpeed;
       } else {
