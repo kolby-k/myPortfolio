@@ -1,15 +1,15 @@
 import hero from './hero.jpg'
 import meta from './meta.png'
 import shopify from './shopify.png'
-import starbucks from './starbucks.png'
-import tesla from './tesla.png'
+import code from './code.png'
+import businessLink from './businessLink.png'
 import logo from './logo.svg'
 
 export {
     hero,
     meta,
     shopify,
-    starbucks,
-    tesla,
+    code,
+    businessLink,
     logo
 }

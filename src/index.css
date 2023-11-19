@@ -155,7 +155,7 @@ body:has(.card[data-color="green"]:hover) {
 }
 
 .block-container .btn-front-tooltip {
-  position: absolute;
+  position: relative;
   inset: 0;
   z-index: 1;
   width: inherit;
@@ -170,7 +170,7 @@ body:has(.card[data-color="green"]:hover) {
 }
 
 .block-container .btn-front {
-  position: absolute;
+  position: relative;
   inset: 0;
   z-index: 1;
   width: inherit;
@@ -242,14 +242,15 @@ li {
   color: white;
   padding: 5px;
   border-radius: 5px;
-  z-index: 1;
-  width:fit-content;
-  transform: translateY(180%); /* Adjust horizontal position */
+  border: 1px solid white;
+  z-index: 20;
+  transform: translateY(100%); /* Adjust horizontal position */
 }
 
 /* Display the tooltip on hover */
 .btn-front-tooltip:hover .tooltip {
   display: block;
+  margin-bottom: 5rem;
 }
 
 /* Optional: add a transition for smoother effect */
@@ -279,6 +280,10 @@ li {
 
 .arrow-center {
   align-self: center;
+}
+
+#tooltip-type {
+  font-size: 0.65rem;
 }
 
 @media screen and (max-width: 1169px) {

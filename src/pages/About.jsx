@@ -32,9 +32,12 @@ const About = () => {
                     <img 
                         src={skill.imageUrl}
                         alt={skill.name}
-                        className="w-1/2 h-1/2 object-container"
+                        className="w-1/2 h-1/2"
                     />
-                    <div className='tooltip'>{skill.name}</div>
+                    <div className='tooltip'>
+                        <h4 className='text-md'>{skill.name}</h4>
+                        <p id="tooltip-type" className='italic'>{skill.type}</p>
+                        </div>
                     </div>
                 </div>
             ))}
@@ -56,7 +59,7 @@ const About = () => {
                 {experiences.map((experience) => (
                     <VerticalTimelineElement
                         key={experience.company_name}
-                        date={<span className='date-text'>{experience.date}</span>}
+                        date={<span className='date-text px-2'>{experience.date}</span>}
                         icon={<div className='flex justify-center items-center w-full h-full'>
                             <img 
                             src={experience.icon}
