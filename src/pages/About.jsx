@@ -12,15 +12,16 @@ const About = () => {
             Hello, I'm <span className='green-gradient_text'>Kolby</span>
         </h1>
 
-        <div>
-            <p className='mt-5 flex flex-col gap-3 text-slate-300'>
-            As a Full Stack Developer, I am driven by a deep curiosity for innovation and a passion for solving complex challenges. My expertise spans both front-end and back-end development, equipping me with a versatile skill set. 
-             <br className='mt-4'/>
-             I take pride in designing efficient systems, possessing the courage to test new ideas, and being committed to building user-friendly websites and applications. My goal is to create digital solutions that function flawlessly and push the boundaries of what is possible in our modern digital world.
+        <div className='mt-5 flex flex-col gap-3 text-slate-300'>
+            <p>
+                As a Full Stack Developer, I am driven by a deep curiosity for innovation and a passion for solving complex challenges. My expertise spans both front-end and back-end development, equipping me with a versatile skill set.
+            </p>
+            <p>
+                I take pride in implementing original ideas, building efficient applications, and designing user-friendly websites. My goal is to create digital solutions that function flawlessly and push the boundaries of what is possible in our modern digital world.
              </p>
         </div>
 
-        <div className='py-10 flex flex-col'>
+        <div className='py-10 flex justify-center flex-col'>
             <h3 className='subhead-text'>
                 My Skills:
             </h3>
@@ -48,9 +49,12 @@ const About = () => {
             <h3 className='subhead-text'>Work Experience</h3>
             <div className='mt-5 flex flex-col gap-3 text-slate-300'>
             <p>
-            I have been fortunate to gain valuable experience in web development through my current role at Business Link. Additionally, a significant part of my expertise comes from my interest in technology and self-learning. This includes building my own websites, ranging from simple blogs to more complex e-commerce shops, and seeking educational opportunities like the <a style={{color: 'lightblue'}} target='_blank' href='https://www.codecademy.com/learn/paths/full-stack-engineer-career-path'>Full Stack Developer career path</a> on Codecademy, which I recently completed.
-            <br className='mt-4'/> 
-            The combination of professional exposure and self-driven learning is an asset that not only demonstrates my commitment to learning and adapting within the dynamic field of web development, but also equips me with the diverse experience necessary to be truly innovative.
+            I have been fortunate to gain valuable experience in web development through my current role at Business Link. 
+            </p>
+            <p>Additionally, a significant part of my expertise comes from my interest in technology and self-learning. This includes building my own websites, ranging from simple blogs to more complex e-commerce shops, and seeking educational opportunities like the <a style={{color: 'lightblue'}} target='_blank' href='https://www.codecademy.com/learn/paths/full-stack-engineer-career-path'>Full Stack Developer career path</a> on Codecademy, which I recently completed.
+            </p>
+            <p>
+            The combination of professional exposure and self-driven learning is an asset that not only demonstrates my commitment to learning, but also equips me with the diverse experience necessary to be truly effective.
             </p>
         </div>
 
