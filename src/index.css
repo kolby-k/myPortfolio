@@ -67,11 +67,11 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .info-box {
-    @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
+    @apply mx-1 relative flex text-white flex-col gap-3 max-w-3xl neo-brutalism-blue pt-4 pb-12 px-8;
   }
 
   .neo-btn {
-    @apply py-3 px-6 rounded-lg text-blue-500 text-center font-semibold sm:w-1/2 w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3;
+    @apply py-2 px-4 rounded-lg text-blue-500 text-center font-semibold sm:w-1/2 w-[70%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-2;
   }
 
   .cta {
@@ -214,12 +214,12 @@ body:has(.card[data-color="green"]:hover) {
 /* MY RULES */
 
 .content-div {
-  cursor: initial;
   position: absolute;
-  top: 32px; /* or any value you desire */
+  top: 32%; /* or any other value that suits your layout */
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
+  /* Add your other styling rules here */
 }
 
 
@@ -295,8 +295,10 @@ li {
 
 @media screen and (max-width: 759px) {
   .dog-style{transform: scale(0.95) translate(7rem, -4rem)}
+  .neo-btn{transform: scale(0.85)}
 }
 
 @media screen and (max-width: 479px) {
   .dog-style{display: none;}
+  .neo-btn{transform: scale(0.75)}
 }
