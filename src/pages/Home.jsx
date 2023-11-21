@@ -12,24 +12,17 @@ const Home = () => {
   const [isRotating, setIsRotating] = useState();
   const [currentStage, setCurrentStage] = useState(3);
 
-
   const adjustIslandForScreenSize = () => {
-    let screenScale = null;
+    let screenScale = [1,1,1];
     let housePosition = [-3, -2, -8];
     let houseRotation = [0, 1.6, 0];
-
-    if (window.innerWidth < 768) {
-      screenScale = [0.8,0.8,0.8];
-    } else {
-      screenScale = [1,1,1];
-    }
 
     return [screenScale, housePosition, houseRotation];
   }
 
   const [screenScale, housePosition, houseRotation] = adjustIslandForScreenSize();
 
-  
+
   return (
     <>
     <section className={`w-full h-screen relative flex justify-center ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}>
@@ -60,7 +53,7 @@ const Home = () => {
 
       </Canvas>
       <div className='text-l flex absolute bottom-8 flex-col justify-center center-align border-red-900'>Interactive<br/><span className='arrow-center text-xl'>⟺</span></div>
-      <div className='content-div absolute top-32 left-50 z-10 flex items-center justify-center'>
+      <div className='content-div'>
       {currentStage && <HomeInfo currentStage={currentStage}/>}
       </div>
     </section>

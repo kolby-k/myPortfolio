@@ -29,9 +29,12 @@ import soundoff from './soundoff.png'
 
 import python from './python.png'
 import sql from './sql.png'
+import weight from './weight.svg'
+import dog from './dog.png'
 
 export {
     css,
+    dog,
     express,
     git,
     github,
@@ -52,7 +55,7 @@ export {
     car,
     estate,
     pricewise,
-    snapgram,
+    weight,
     summiz,
     threads,
     arrow,
