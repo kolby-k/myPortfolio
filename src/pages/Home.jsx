@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from 'react'
+import React, { Suspense, useState, useEffect } from 'react'
 import { Canvas } from '@react-three/fiber';
 
 import Loader from '../components/Loader';
@@ -11,6 +11,21 @@ import HomeInfo from '../components/HomeInfo';
 const Home = () => {
   const [isRotating, setIsRotating] = useState();
   const [currentStage, setCurrentStage] = useState(3);
+
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportHeight(window.innerHeight);
+    };
+
+    // Set the height initially and listen for resize events
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    // Clean up
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const adjustIslandForScreenSize = () => {
     let screenScale = [1,1,1];
@@ -25,7 +40,10 @@ const Home = () => {
 
   return (
     <>
-    <section className={`w-full h-screen relative flex justify-center ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}>
+   <section 
+        className={`w-full relative flex justify-center ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
+        style={{ height: `${viewportHeight}px` }}
+      >
       
       <Canvas
         className='w-full h-screen bg-transparent'
@@ -52,7 +70,7 @@ const Home = () => {
         </Suspense>
 
       </Canvas>
-      <div className='text-l flex absolute bottom-8 flex-col justify-center center-align border-red-900'>Interactive<br/><span className='arrow-center text-xl'>⟺</span></div>
+      <div className='text-l flex absolute bottom-8 flex-col justify-center center-align'>Interactive<br/><span className='arrow-center text-xl'>⟺</span></div>
       <div className='content-div'>
       {currentStage && <HomeInfo currentStage={currentStage}/>}
       </div>

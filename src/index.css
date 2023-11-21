@@ -214,12 +214,12 @@ body:has(.card[data-color="green"]:hover) {
 /* MY RULES */
 
 .content-div {
+  cursor: initial;
   position: absolute;
-  top: 32%; /* or any other value that suits your layout */
+  top: 32px; /* or any value you desire */
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-  /* Add your other styling rules here */
 }
 
 
