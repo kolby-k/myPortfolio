@@ -31,7 +31,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .subhead-text {
-    @apply font-semibold text-white sm:text-3xl text-xl relative font-poppins;
+    @apply font-semibold text-white sm:text-3xl text-xl relative font-poppins text-center;
   }
 
   .green-gradient_text {
@@ -87,7 +87,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .dog-style {
-    @apply w-[500px] h-[500px] absolute top-0 right-0 -translate-y-10
+    @apply w-[500px] h-[500px] absolute top-0 right-0 -translate-y-10 overflow-hidden
   }
   
 }
@@ -294,7 +294,7 @@ li {
 };
 
 @media screen and (max-width: 759px) {
-  .dog-style{transform: scale(0.95) translate(7rem, -4rem)}
+  .dog-style{display: none;}
   .neo-btn{transform: scale(0.85)}
 }
 

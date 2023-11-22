@@ -31,6 +31,7 @@ import python from './python.png'
 import sql from './sql.png'
 import weight from './weight.svg'
 import dog from './dog.png'
+import npm from './npm.png'
 
 export {
     css,
@@ -63,5 +64,6 @@ export {
     soundon,
     soundoff,
     python,
-    sql
+    sql,
+    npm
 }

@@ -24,7 +24,8 @@ import {
     threads,
     python,
     sql,
-    weight
+    weight,
+    npm
 } from "../assets/icons";
 
 export const skills = [
@@ -57,6 +58,11 @@ export const skills = [
         imageUrl: github,
         name: "GitHub",
         type: "Version Control",
+    },
+    {
+        imageUrl: npm,
+        name: "NPM",
+        type: "Package Manager",
     },
     {
         imageUrl: nodejs,
