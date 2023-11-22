@@ -289,6 +289,20 @@ li {
   font-size: 0.65rem;
 }
 
+.interactive {
+  position: absolute;
+  opacity: 1;
+  visibility: visible; /* Ensure visibility is set to visible here */
+  transition: opacity 1s, visibility 1s linear; /* Transition both opacity and visibility */
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s, visibility 0s linear 1s; /* Apply delay to visibility transition */
+}
+
+
 @media screen and (max-width: 1169px) {
   .date-text {color: black}
 };

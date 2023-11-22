@@ -11,10 +11,13 @@ const Projects = () => {
         My <span className='green-gradient_text'>Projects</span>
     </h1>
     <div className='mt-5 flex flex-col gap-3 text-slate-300'>
+    <p>I enjoy working on projects because each one I undertake enriches my developer toolkit, enabling me to navigate new, more difficult challenges in the future. 
+    </p>
       <p>
-      I view each project as an exciting journey, invariably filled with challenges and lessons, providing me with valuable opportunities for growth as a developer.
+        Reflecting on all of my projects, I remember each were invariably filled with many challenges. It's by overcoming those hurdles that often has lead me to my most important lessons.
       </p>
-       <p>Every project I undertake enriches my 'toolkit', enabling me to navigate new, more difficult challenges in the future. 
+    <p>
+     <em>Checkout my projects below!</em> 
     </p>
     </div>
 

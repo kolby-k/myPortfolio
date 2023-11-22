@@ -5,7 +5,7 @@ import { a } from '@react-spring/three';
 
 import houseScene from '../assets/3d/house.glb';
 
-export default function House({isRotating, setIsRotating, setCurrentStage, ...props}) {
+export default function House({isRotating, setIsRotating, setCurrentStage, setIsInteractiveVisible, ...props}) {
     const { gl, viewport } = useThree();
     const { nodes, materials } = useGLTF(houseScene);
   
@@ -17,14 +17,17 @@ export default function House({isRotating, setIsRotating, setCurrentStage, ...pr
     const dampingFactor = 0.95;
     const dampingFactorSlow = 0.8; // Adjust this value as needed
       
+    const { isInteractiveVisible, ...otherProps } = props;
+
     const handlePointerDown = (e) => {
       e.stopPropagation();
       e.preventDefault();
       setIsRotating(true);
       setIsHolding(true); 
       const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-  
+      document.getElementById('interactive').style.cl
       setLastX(clientX);
+      setIsInteractiveVisible(false)
     };
   
     const handlePointerUp = (e) => {
@@ -32,6 +35,8 @@ export default function House({isRotating, setIsRotating, setCurrentStage, ...pr
       e.preventDefault();
       setIsRotating(false);
       setIsHolding(false); // User released the pointer
+      console.log(isInteractiveVisible)
+
     };
   
     const handlePointerMove = (e) => {

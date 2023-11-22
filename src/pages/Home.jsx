@@ -11,6 +11,7 @@ import HomeInfo from '../components/HomeInfo';
 const Home = () => {
   const [isRotating, setIsRotating] = useState();
   const [currentStage, setCurrentStage] = useState(3);
+  const [isInteractiveVisible, setIsInteractiveVisible] = useState(true);
 
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
@@ -26,6 +27,7 @@ const Home = () => {
     // Clean up
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+  
 
   const adjustIslandForScreenSize = () => {
     let screenScale = [1,1,1];
@@ -64,13 +66,20 @@ const Home = () => {
             position={housePosition} 
             rotation={houseRotation} 
             isRotating={isRotating}
+            isInteractiveVisible={isInteractiveVisible}
             setIsRotating={setIsRotating}
             setCurrentStage={setCurrentStage}
+            setIsInteractiveVisible={setIsInteractiveVisible}
           />
         </Suspense>
 
       </Canvas>
-      <div className='text-l flex absolute bottom-8 flex-col justify-center center-align'>Interactive<br/><span className='arrow-center text-xl'>⟺</span></div>
+      <div 
+  id="interactive" 
+  className={`text-l flex absolute bottom-8 flex-col justify-center center-align interactive ${!isInteractiveVisible ? "hide" : ""}`}
+>
+  Interactive<br/><span className='arrow-center text-xl'>⟺</span>
+</div>
       <div className='content-div'>
       {currentStage && <HomeInfo currentStage={currentStage}/>}
       </div>

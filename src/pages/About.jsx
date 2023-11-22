@@ -23,7 +23,7 @@ const About = () => {
 
         <div className='py-10 flex justify-center flex-col'>
             <h3 className='subhead-text'>
-                My Skills:
+                Technical Skills
             </h3>
             <div className='mt-16 flex justify-center flex-wrap gap-12'>
             {skills.map((skill) => (
@@ -46,12 +46,14 @@ const About = () => {
         </div>
 
         <div className='py-16'>
-            <h3 className='subhead-text'>Work Experience</h3>
+            <h3 className='subhead-text'>Experience</h3>
             <div className='mt-5 flex flex-col gap-3 text-slate-300'>
             <p>
             I have been fortunate to gain valuable experience in web development through my current role at Business Link. 
             </p>
-            <p>Additionally, a significant part of my expertise comes from my interest in technology and self-learning. This includes building my own websites, ranging from simple blogs to more complex e-commerce shops, and seeking educational opportunities like the <a style={{color: 'lightblue'}} target='_blank' href='https://www.codecademy.com/learn/paths/full-stack-engineer-career-path'>Full Stack Developer career path</a> on Codecademy, which I recently completed.
+            <p>Additionally, a significant part of my expertise comes from my interest in technology and self-learning. This includes building my own websites, orignally relying on platforms such as Shopify, WordPress, and Wix. In 2022, however, after learning Python for data analaysis I began to use it for web development (Django). </p>
+            <p>Around the same time, I became interested in learning other programming languages for web development (HTML, CSS, JavaScript).</p>
+            <p> I find myself constantly seeking educational opportunities. In early 2023 I enrolled in the <a style={{color: 'lightblue'}} target='_blank' href='https://www.codecademy.com/learn/paths/full-stack-engineer-career-path'>Full Stack Developer career path</a>. It provided me with a great introduction to web developmentmt, which I have since enjoyed expanding on.
             </p>
             <p>
             The combination of professional exposure and self-driven learning is an asset that not only demonstrates my commitment to learning, but also equips me with the diverse experience necessary to be truly effective.
